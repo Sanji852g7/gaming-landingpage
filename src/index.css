@@ -6,7 +6,6 @@
   --font-general: "general", sans-serif;
   --font-robert-medium: "robert-medium", sans-serif;
   --font-robert-regular: "robert-regular", sans-serif;
-  --color-blue-75: #dfdff0;
 }
 
 body {
@@ -109,17 +108,17 @@ body {
   }
 
   .story-img-container {
-    @apply relative md:h-dvh h-[90vh] w-full;
+    @apply relative h-[55vh] w-full md:h-dvh;
     filter: url("#flt_tag");
   }
 
   .story-img-mask {
-    @apply absolute left-0 top-0 size-full overflow-hidden md:left-[20%] md:top-[-10%] md:size-4/5;
-    clip-path: polygon(4% 0, 83% 21%, 100% 73%, 0% 100%);
+    @apply absolute left-1/2 top-[-10%] h-4/5 w-[70%] -translate-x-1/2 overflow-hidden;
+    clip-path: polygon(4% 0, 83% 21%, 95% 73%, 0% 100%);
   }
 
   .story-img-content {
-    @apply absolute w-full md:h-dvh h-[50dvh] opacity-100 left-10 top-16 md:left-0 md:top-10 lg:left-[-300px] lg:top-[-100px];
+    @apply size-full overflow-visible;
     transform: translate3d(0, 0, 0) rotateX(0) rotateY(0) rotateZ(0) scale(1);
   }
 
@@ -276,3 +275,4 @@ body {
     opacity: 0.8;
   }
 }
+
